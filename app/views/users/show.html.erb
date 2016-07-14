@@ -15,8 +15,8 @@
       <a href="/projects/<%= project.id %>"><img class="project-image" src="<%= project.picture_url %>" alt=""></a>
       <h1 class="project-name"><%= project.name %></h1>
       <h1 class="project-funded">X % Funded</h1>
-      <h1 class="project-shares-total">Shares Left</h1>
-      <h1 class="project-days-togo">Days left</h1>
+      <h1 class="project-shares-total"><%= project.calculate_shares('left') %> Shares Left</h1>
+      <h1 class="project-days-togo"><%= project.days_left %> Days left</h1>
       <h1 class="edit-project">(Edit Project)</h1>
     </div>
   <% end %>
