@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :ensure_logged_in, except: [:new]
+  before_action :ensure_logged_in, except: [:new, :create]
 
   def index
     @users = User.all
@@ -7,10 +7,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-
-    # if current_user
-    #   @review = @user.reviews.build
-    # end
   end
 
   def new
@@ -23,9 +19,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    binding.pry
     if @user.save
-      #log the user in
+      session[:user_id] = @user.id
       redirect_to projects_path
     else
       render :new
