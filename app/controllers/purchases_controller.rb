@@ -7,16 +7,20 @@ class PurchasesController < ApplicationController
   end
 
   def create
+    puts "********"
+    puts params
     @purchase = Purchase.new(purchase_params)
+    @purchase.user_id = current_user.id
     if @purchase.save
       redirect_to projects_path
     else
-      render :new
+      @project = Project.find(params[:purchase][:project_id])
+      render 'projects/show'
     end
   end
 
   private
   def purchase_params
-    params.require(:purchase).permit(:number_of_shares)
+    params.require(:purchase).permit(:number_of_shares, :share_id, :project_id)
   end
 end

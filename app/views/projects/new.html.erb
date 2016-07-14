@@ -2,17 +2,37 @@
 
 <%= form_for @project do |f| %>
   <div class="field">
-      <%= f.label :name %><br>
-      <%= f.text_field :name %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </div>
   <div class="field">
-      <%= f.label :description %><br>
-      <%= f.text_area :description %>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
   </div>
   <div class="field">
-      <%= f.label :max_shares %><br>
-      <%= f.number_field :max_shares %>
+    <%= f.label :picture_url %><br>
+    <%= f.text_field :picture_url %>
+  </div>
+  <div class="field">
+    <%= f.label :max_shares %><br>
+    <%= f.number_field :max_shares %>
+  </div>
+  <div class="field">
+    <%= f.label :deadline %><br>
+    <%= f.datetime_select :deadline %>
+  </div>
+  <div class="field">
+    <h2>Shares Available For Sale</h2>
+    <%= f.fields_for :shares do |r| %>
+      <div class="field">
+        <%= r.label :price %>
+        <%= r.number_field :price %>
+      </div>
+      <div class="field">
+        <%= r.label :share_type %>
+        <%= r.text_field :share_type %>
+      </div>
+    <% end %>
   </div>
   <%= f.submit %>
-
 <% end %>
