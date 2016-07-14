@@ -5,10 +5,43 @@
   box-sizing: border-box;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  background-color: #f0f0f5;
+
   }
 
 .page-heading {
   font-size: 30px;
   color: black;
   text-align: center;
+  border-top: 1px solid #3d3d5c
+}
+
+.project-card {
+  width: 296px;
+  height: 308px;
+  background-color: #F0F1F3;
+  display: inline-block;
+  border: 1px solid grey;
+  margin-top: 24px;
+}
+
+.profile-page-image {
+  width: 136px;
+  border-radius: 100%;
+  display: inline-block;
+  float: left;
+  margin:  16px 24px 0px 44px;
+}
+
+.project-name {
+  font-size: 15px;
+
+}
+
+.project-description {
+  font-size: 10px;
+}
+
+.project-link {
+
 }
