@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
-  before_action :ensure_logged_in, except: [:new]
-  
+  # before_action :ensure_logged_in, except: [:index]
+
   def index
     @projects = Project.all
   end

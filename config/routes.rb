@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
   root 'projects#index'
-  resources :users
-  resources :projects
-  resources :transactions
-  resources :shares
+  resources :users, only: [:index, :show, :new, :create]
+  resources :projects, only: [:index, :show, :new, :create, :destroy]
+  resources :purchases, only: [:new, :create]
+  # resources :shares, only: []
   resources :sessions, only: [:new, :create, :destroy]
 
 
