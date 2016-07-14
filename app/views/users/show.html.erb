@@ -1,7 +1,23 @@
-<h1>THIS IS THE USER'S PROFILE</h1>
-<%= link_to "BACK TO PROJECTS", projects_path %>
+<%= link_to "BACK TO PROJECTS", projects_path %><br>
 
-<br><%= @user.name %>
+<div class="profile-info">
+  <img class="profile-page-image" src="http://www.thebolde.com/wp-content/uploads/2015/11/iStock_000083903869_Small-400x400.jpg">
+  <div class="profile-page-user-info">
+    <h2 class="profile-page-name"><%= @user.name %></h2>
+    <h3 class="profile-page-email"><%= @user.email %></h3>
+  </div>
+</div>
 
-LIST OF PLEDGES GO HERE <br>
-LIST OF PROJECTS GO HERE
+
+
+
+
+<h4 class="profile-page-titles">ALL PROJECTS(<%= @user.projects.count %>)</h4>
+
+<h4 class="profile-page-titles">OWNED SHARES(
+  <% count = 0
+  @user.purchases.each do |purchase|
+     count += purchase.number_of_shares
+   end%>
+   <%= return count %>
+)</h4>

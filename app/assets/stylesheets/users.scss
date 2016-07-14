@@ -1,3 +1,44 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+.body {
+  overflow: hidden;
+}
+
+.profile-info {
+  overflow: hidden;
+  display: block;
+}
+.profile-page-image {
+  width: 136px;
+  border-radius: 100%;
+  display: inline-block;
+  float: left;
+  margin:  16px 24px 0px 44px;
+}
+
+.profile-page-user-info {
+  float: left;
+  margin-top: 56px;
+}
+.profile-page-name {
+  font-size: 36px;
+  margin: 0;
+}
+
+.profile-page-email {
+  font-size: 24px;
+  margin: 0;
+
+}
+
+.profile-page-all-projects {
+  margin: 36px 0 0 44px;
+}
