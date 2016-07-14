@@ -3,6 +3,9 @@ class Purchase < ActiveRecord::Base
   belongs_to :project
   belongs_to :share
 
+  validates :number_of_shares, presence: true
+  validates :number_of_shares, numericality: {greater_than: 0}
+  validates :share_id, presence: true
   validate :available_shares
 
   def available_shares

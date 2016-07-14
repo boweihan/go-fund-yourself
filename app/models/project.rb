@@ -5,6 +5,11 @@ class Project < ActiveRecord::Base
 
   accepts_nested_attributes_for :shares
 
+  validates :name, :description, :picture_url, :max_shares, presence: true
+  validates :max_shares, numericality: {greater_than: 0}
+  validate :valid_time
+
+
   def calculate_shares(status)
     shares_sold= Purchase.where(project_id: self.id).sum(:number_of_shares)
     if status == 'sold'
@@ -22,4 +27,9 @@ class Project < ActiveRecord::Base
     return ((self.deadline - DateTime.now.utc)/86400).floor
   end
 
+  def valid_time
+    if (self.deadline <= Time.now)
+      errors.add(:valid_time, "is already passed")
+    end
+  end
 end
