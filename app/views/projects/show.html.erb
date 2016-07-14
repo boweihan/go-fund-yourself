@@ -13,7 +13,10 @@
 
 <%= @project.days_left %> days left <br>
 <%= image_tag @project.picture_url %>
-
+<p>
+  Campaign Completion Percentage:
+  <%= @project.percentage %> %
+</p>
 
 <h3> Possible Share Types: </h3>
 <% @project.shares.each do |share| %>
