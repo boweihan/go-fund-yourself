@@ -8,25 +8,31 @@
   </div>
 </div>
 
-
-
-
-
 <h4 class="profile-page-titles">ALL PROJECTS ( <%= @user.projects.count %> )</h4>
 <div class="profile-page-projects">
   <% @user.projects.each do |project| %>
-    <div class="profile-page-project">
-      <img class="project-image" src="http://www.thebolde.com/wp-content/uploads/2015/11/iStock_000083903869_Small-400x400.jpg" alt="">
+      <div class="profile-page-project">
+      <a href="/projects/<%= project.id %>"><img class="project-image" src="<%= project.picture_url %>" alt=""></a>
       <h1 class="project-name"><%= project.name %></h1>
-      <h1 class="project-shares-total">Fill this in later</h1>
-
+      <h1 class="project-funded">X % Funded</h1>
+      <h1 class="project-shares-total">Shares Left</h1>
+      <h1 class="project-days-togo">Days left</h1>
+      <h1 class="edit-project">(Edit Project)</h1>
     </div>
   <% end %>
 
 </div>
-<h4 class="profile-page-titles">OWNED SHARES (<% count = 0
+<h4 class="profile-page-titles">PURCHASES (<% count = 0
   @user.purchases.each do |purchase|
      count += purchase.number_of_shares
    end %>
    <%= count %>
 )</h4>
+<div class="profile-page-purchases">
+  <% @user.purchases.each do |purchase| %>
+    <div class="profile-page-purchase">
+      <h1 class="purchase-project"><%= purchase.project.name %>(link this to project)</h1>
+      <h1 class="purchase-num-shares"><%= purchase.number_of_shares %> shares bought | worth $<%= purchase.share.price %></h1>
+    </div>
+    <hr class="profile-page-divider">
+  <% end %>

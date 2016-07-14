@@ -8,9 +8,11 @@
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 .body {
   overflow: hidden;
+  background-color: #F9F9F9;
 }
 
 .profile-info {
@@ -32,11 +34,13 @@
 .profile-page-name {
   font-size: 36px;
   margin: 0;
+
 }
 
 .profile-page-email {
   font-size: 24px;
   margin: 0;
+    color: #419B8D;
 
 }
 
@@ -50,14 +54,15 @@
 .profile-page-project {
   width: 296px;
   height: 308px;
-  background-color: yellow;
+  background-color: #F0F1F3;
   display: inline-block;
-  margin: 24px;
   border: 1px solid grey;
+  margin-top: 24px;
 }
 
 .profile-page-titles {
   font-size: 20px;
+  margin: 36px 0 0 44px;
 }
 
 .project-image {
@@ -67,9 +72,62 @@
 .project-name {
   font-size: 24px;
   margin: 16px;
+  display: inline-block;
 }
 
 .project-shares-total {
   margin-left: 16px;
   font-size: 18px;
+  margin-top: 0;
+}
+
+.project-funded {
+  font-size: 16px;
+  display: inline-block;
+  margin-left: 30px;
+  color: #419B8D;
+}
+
+.project-days-togo {
+  font-size: 16px;
+  display: inline-block;
+  margin-left: 16px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.edit-project {
+  font-size: 16px;
+  margin-left: 100px;
+  display: inline-block;
+  color: #419B8D;
+}
+
+// shares styling
+.profile-page-purchases {
+  margin-left: 44px;
+}
+
+.profile-page-purchase{
+  height: 72px;
+  margin: 24px 44px 0 0;
+  margin-bottom: 0px;
+  padding: 16px;
+}
+
+.profile-page-divider {
+  margin-right: 44px;
+}
+
+.purchase-project {
+  font-size: 24px;
+  margin-left: 8px;
+  color: #419B8D;
+  display: inline-block;
+}
+
+.purchase-num-shares {
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 500px;
 }
