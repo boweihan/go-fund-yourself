@@ -6,9 +6,14 @@
   <%= @project.description %>
 </p>
 <h4 class="project-max-shares-show">Maximum Shares: <%= @project.max_shares %></h4>
+
 <p>
   Shares Available:
   <%= @project.calculate_shares('left') %></p>
+
+<%= @project.days_left %>
+
+
 <h3> Possible Share Types: </h3>
 <% @project.shares.each do |share| %>
 <%= share.share_type %> @ <%= share.price %> per share

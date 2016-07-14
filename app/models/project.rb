@@ -13,4 +13,10 @@ class Project < ActiveRecord::Base
       return self.max_shares - shares_sold
     end
   end
+
+  def days_left
+    binding.pry
+    # self.deadline
+  end
+
 end
