@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160714021231) do
+ActiveRecord::Schema.define(version: 20160714203405) do
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20160714021231) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.integer  "project_id"
+    t.integer  "share_id"
   end
 
   add_index "purchases", ["user_id"], name: "index_purchases_on_user_id"
@@ -37,10 +38,9 @@ ActiveRecord::Schema.define(version: 20160714021231) do
   create_table "shares", force: :cascade do |t|
     t.integer  "price"
     t.integer  "project_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "share_type"
-    t.integer  "purchase_id"
   end
 
   add_index "shares", ["project_id"], name: "index_shares_on_project_id"
