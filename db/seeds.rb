@@ -8,4 +8,4 @@
 User.create(name: 'test', email:'test@test.com', password:'test', password_confirmation:'test')
 Project.create(name: 'test project', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit', user_id: 1, max_shares: 100, picture_url:"http://www.thebolde.com/wp-content/uploads/2015/11/iStock_000083903869_Small-400x400.jpg")
 Share.create(share_type: 'voting', price: 5, project_id:1)
-Purchase.create(number_of_shares: 100, user_id: 1, project_id: 1, share_id: 1)
+Purchase.create(number_of_shares: 99, user_id: 1, project_id: 1, share_id: 1)

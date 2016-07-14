@@ -1,8 +1,35 @@
 <%= link_to "Back to all projects", projects_path %>
-<%= link_to "PURCHASE", new_purchase_path %>
+
 <h1 class="project-name-show"><%= @project.name %></h1>
 <h4 class="project-description-title-show">Description</h4>
 <p class="project-description-show">
   <%= @project.description %>
 </p>
 <h4 class="project-max-shares-show">Maximum Shares: <%= @project.max_shares %></h4>
+
+<p>
+  Shares Available:
+  <%= @project.calculate_shares('left') %></p>
+
+<%= @project.days_left %>
+
+
+<h3> Possible Share Types: </h3>
+<% @project.shares.each do |share| %>
+<%= share.share_type %> @ <%= share.price %> per share
+<% end %>
+<h2> Purchase Form </h2>
+<%= form_for @purchase do |f| %>
+<%= f.label :number_of_shares %>
+<%= f.number_field :number_of_shares %>
+<br>
+
+<%= f.label :share_type %>:
+<% @project.shares.each do |share| %>
+
+<%= f.radio_button :share_id, share.id%> <%=share.share_type%>
+<% end %>
+<br>
+<%= f.hidden_field :project_id, value: @project.id %>
+<%= f.submit "Make a Donation"%>
+<% end %>
