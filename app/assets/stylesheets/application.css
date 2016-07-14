@@ -13,3 +13,93 @@
  *= require_tree .
  *= require_self
  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  }
+
+.navigation-bar {
+  width: 100%;
+  background-color: #f0f0f5;
+  text-align: right;
+ }
+ a.login {
+   text-decoration: none;
+   
+ }
+/*a.login{
+  layout: inline-block;
+  text-decoration: none;
+}*/
+body {
+  width: 100%;
+  margin: 0 auto;
+  }
+
+
+.home-background img {
+  width: 100%;
+  height: 600px;
+  opacity: .7;
+  -web-filter:grayscale(100%);
+  filter: grayscale(100%);
+    /*background:
+      linear-gradient(
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 0, 1)
+    ),*/
+    /*url(GFY.jpg);*/
+  }
+
+#welcome-page {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 150px;
+  z-index: 2;
+  opacity: 1;
+  font-size: 40px;
+  font-weight: normal;
+  color: white;
+
+   /*margin-left: 5%;*/
+ }
+
+#sub-header {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 230px;
+  z-index: 3;
+  font-size: 20px;
+  font-weight: lighter;
+  color: white;
+ }
+
+.myButton {
+ 	/*-moz-box-shadow:inset 0px 1px 0px 0px #9acc85;
+ 	-webkit-box-shadow:inset 0px 1px 0px 0px #9acc85;*/
+ 	/*box-shadow:inset 0px 1px 0px 0px #9acc85;
+ 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #74ad5a), color-stop(1, #68a54b));
+ 	background:-moz-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+ 	background:-webkit-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+ 	background:-o-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+ 	background:-ms-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+ 	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+ 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#74ad5a', endColorstr='#68a54b',GradientType=0);*/
+  background-color:#00A08E;
+  border:1px solid #00A08E;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  padding:10px 15px;
+  text-decoration:none;
+  position: absolute;
+  margin-right: 40%;
+  margin-left: 45%;
+  top: 350px;
+  z-index: 4;
+ }

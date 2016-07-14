@@ -5,16 +5,18 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,greek' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <div class="navigation-bar">
+  <% if current_user %>
+    <br>You are currently signed in as <%= current_user.name %> <%= link_to 'View Profile', user_path(current_user) %>| <%= link_to "Logout", session_path("this session"), :method => :delete %>
+  <% else %>
+    <br><%= link_to "Login", new_session_path %> <%= link_to "Sign-Up", new_user_path %>
+  <% end %>
+  </div>
+  <%= yield %>
 
-<%= yield %>
-
-<% if current_user %>
-  <br>You are currently signed in as <%= current_user.name %> <%= link_to 'View Profile', user_path(current_user) %>| <%= link_to "Logout", session_path("this session"), :method => :delete %>
-<% else %>
-  <br><%= link_to "Login", new_session_path %> or <%= link_to "Sign-Up", new_user_path %>
-<% end %>
 
 </body>
 </html>
