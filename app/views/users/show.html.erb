@@ -12,12 +12,21 @@
 
 
 
-<h4 class="profile-page-titles">ALL PROJECTS(<%= @user.projects.count %>)</h4>
+<h4 class="profile-page-titles">ALL PROJECTS ( <%= @user.projects.count %> )</h4>
+<div class="profile-page-projects">
+  <% @user.projects.each do |project| %>
+    <div class="profile-page-project">
+      <img class="project-image" src="http://www.thebolde.com/wp-content/uploads/2015/11/iStock_000083903869_Small-400x400.jpg" alt="">
+      <h1 class="project-name"><%= project.name %></h1>
+      <h1 class="project-shares-total">Fill this in later</h1>
 
-<h4 class="profile-page-titles">OWNED SHARES(
-  <% count = 0
+    </div>
+  <% end %>
+
+</div>
+<h4 class="profile-page-titles">OWNED SHARES (<% count = 0
   @user.purchases.each do |purchase|
      count += purchase.number_of_shares
-   end%>
-   <%= return count %>
+   end %>
+   <%= count %>
 )</h4>

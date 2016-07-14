@@ -7,6 +7,7 @@
 * {
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
+  margin: 0;
 }
 .body {
   overflow: hidden;
@@ -41,4 +42,34 @@
 
 .profile-page-all-projects {
   margin: 36px 0 0 44px;
+}
+
+.profile-page-projects {
+  margin-left: 44px;
+}
+.profile-page-project {
+  width: 296px;
+  height: 308px;
+  background-color: yellow;
+  display: inline-block;
+  margin: 24px;
+  border: 1px solid grey;
+}
+
+.profile-page-titles {
+  font-size: 20px;
+}
+
+.project-image {
+  width: 296px;
+  height:166px;
+}
+.project-name {
+  font-size: 24px;
+  margin: 16px;
+}
+
+.project-shares-total {
+  margin-left: 16px;
+  font-size: 18px;
 }
