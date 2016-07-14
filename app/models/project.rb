@@ -14,6 +14,10 @@ class Project < ActiveRecord::Base
     end
   end
 
+  def percentage
+    self.calculate_shares("sold").to_f/self.max_shares*100
+  end
+
   def days_left
     return ((self.deadline - DateTime.now.utc)/86400).floor
   end
