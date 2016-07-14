@@ -1,4 +1,7 @@
 class PurchasesController < ApplicationController
+
+  before_action :ensure_logged_in
+
   def new
     @purchase = Purchase.new
   end
