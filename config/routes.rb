@@ -1,31 +1,12 @@
 Rails.application.routes.draw do
-  get 'purchases/new'
 
-  get 'purchases/create'
+  root 'projects#index'
+  resources :users
+  resources :projects
+  resources :transactions
+  resources :shares
+  resources :sessions, only: [:new, :create, :destroy]
 
-  get 'shares/new'
-
-  get 'transactions/new'
-
-  get 'projects/index'
-
-  get 'projects/new'
-
-  get 'projects/create'
-
-  get 'projects/edit'
-
-  get 'projects/update'
-
-  get 'projects/destroy'
-
-  get 'users/new'
-
-  get 'users/create'
-
-  get 'user/new'
-
-  get 'user/create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
