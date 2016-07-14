@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'projects#index'
+  # get 'pages/home'
+
+  root 'pages#home'
   resources :users, only: [:index, :show, :new, :create]
   resources :projects, only: [:index, :show, :new, :create, :destroy]
   resources :purchases, only: [:new, :create]
