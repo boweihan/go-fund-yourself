@@ -12,11 +12,14 @@
   <div class="navigation-bar">
     <%= link_to "GoFundYourself", '/', class:"homeButton" %>
   <% if current_user %>
-    <%= link_to "View Projects", '/', class:"viewProject" %><%= link_to 'View Profile', user_path(current_user) %>| <%= link_to "Logout", session_path("this session"), :method => :delete %>
+    <%= link_to "View Projects", projects_url, class:"viewProject" %><%= link_to 'View Profile', user_path(current_user), class:"viewProject" %> <%= link_to "Logout", session_path("this session"), class:"signUpButton", :method => :delete %>
   <% else %>
-    <%= link_to "View Projects", '/', class:"viewProject" %><%= link_to "Login", new_session_path, class:"loginButton" %> <%= link_to "Sign-Up", new_user_path, class:"signUpButton" %>
+    <%= link_to "View Projects", projects_url, class:"viewProject" %><%= link_to "Login", new_session_path, class:"loginButton" %> <%= link_to "Sign-Up", new_user_path, class:"signUpButton" %>
   <% end %>
   </div>
+  <% flash.each do |key, value | %>
+    <div id='flash_message'><%= value %></div>
+  <% end %>
   <%= yield %>
 
 </body>
