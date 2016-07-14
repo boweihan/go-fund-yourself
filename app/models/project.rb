@@ -4,4 +4,10 @@ class Project < ActiveRecord::Base
   has_many :purchases
 
   accepts_nested_attributes_for :shares
+
+  def days_left
+    binding.pry
+    # self.deadline
+  end
+
 end
