@@ -1,6 +1,14 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.heading {
-  
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  }
+
+.page-heading {
+  font-size: 30px;
+  color: black;
+  text-align: center;
 }
