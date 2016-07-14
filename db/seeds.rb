@@ -6,6 +6,6 @@
 # #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 # #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.create(name: 'test', email:'test@test.com', password:'test', password_confirmation:'test')
-Project.create(name: 'test project', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit', user_id: 1, max_shares: 100)
+Project.create(name: 'test project', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit', picture_url: 'http://coolwildlife.com/wp-content/uploads/galleries/post-3004/Fox%20Picture%20003.jpg', deadline: DateTime.new(2018, 6, 22), user_id: 1, max_shares: 100)
 Share.create(share_type: 'voting', price: 5, project_id:1)
 Purchase.create(number_of_shares: 99, user_id: 1, project_id: 1, share_id: 1)
