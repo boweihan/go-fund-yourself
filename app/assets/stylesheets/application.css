@@ -23,10 +23,57 @@
   width: 100%;
   background-color: #f0f0f5;
   text-align: right;
+  display: inline-block;
  }
- a.login {
-   text-decoration: none;
-   
+.homeButton {
+  text-decoration: none;
+  float: left;
+  margin-top: 10px;
+  margin-botton: 10px;
+  margin-left: 3%;
+  font-family: 'Lobster', cursive;
+  font-size: 25px;
+  color: #00A08E;
+ }
+
+.viewProject{
+  text-decoration: none;
+  display:inline-block;
+  font-size:17px;
+  font-weight: lighter;
+  color: #00A08E;
+  padding:1px 25px;
+  margin-bottom: 15px;
+  margin-right: 3%;
+  margin-top: 15px;
+
+}
+
+.signUpButton{
+  text-decoration: none;
+  background-color: white;
+  border:1px solid #00A08E;
+  display:inline-block;
+  font-size:17px;
+  font-weight: lighter;
+  color: #00A08E;
+  padding:1px 25px;
+  margin-bottom: 15px;
+  margin-right: 3%;
+}
+.loginButton{
+  text-decoration: none;
+  background-color:#00A08E;
+  border:1px solid #00A08E;
+  display:inline-block;
+  font-size:17px;
+  font-weight: lighter;
+  color: white;
+  padding:1px 25px;
+  margin-bottom: 15px;
+  margin-right: 3%;
+
+
  }
 /*a.login{
   layout: inline-block;
@@ -37,19 +84,10 @@ body {
   margin: 0 auto;
   }
 
-
 .home-background img {
   width: 100%;
   height: 600px;
   opacity: .7;
-  -web-filter:grayscale(100%);
-  filter: grayscale(100%);
-    /*background:
-      linear-gradient(
-        rgba(255, 0, 0, 1),
-        rgba(255, 0, 0, 1)
-    ),*/
-    /*url(GFY.jpg);*/
   }
 
 #welcome-page {
@@ -93,7 +131,7 @@ body {
   display:inline-block;
   cursor:pointer;
   color:#ffffff;
-  font-family:Arial;
+  /*font-family:Arial;*/
   font-size:17px;
   padding:10px 15px;
   text-decoration:none;
