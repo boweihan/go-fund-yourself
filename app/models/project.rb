@@ -6,8 +6,7 @@ class Project < ActiveRecord::Base
   accepts_nested_attributes_for :shares
 
   def days_left
-    binding.pry
-    # self.deadline
+    return ((self.deadline - DateTime.now.utc)/86400).floor
   end
 
 end

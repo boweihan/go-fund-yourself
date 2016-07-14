@@ -8,7 +8,8 @@
 <h4 class="project-max-shares-show">Maximum Shares: <%= @project.max_shares %></h4>
 
 
-<%= @project.days_left %>
+<%= @project.days_left %> days left <br>
+<%= image_tag @project.picture_url %>
 
 <h3> Possible Share Types: </h3>
 <% @project.shares.each do |share| %>
