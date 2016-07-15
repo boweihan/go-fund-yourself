@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   resources :users, only: [:index, :show, :new, :create]
-  resources :projects, only: [:index, :show, :new, :create, :destroy, :edit, :update] do
-    resources :shares
-  end
+  get 'projects/:id/statistics' => 'projects#statistics'
+  resources :projects, only: [:index, :show, :new, :create, :destroy, :edit, :update]
+
 
   resources :purchases, only: [:new, :create]
   # resources :shares, only: []

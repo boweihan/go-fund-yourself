@@ -47,6 +47,8 @@ class ProjectsController < ApplicationController
     redirect_to projects_path
   end
 
+  def statistics
+  end
   private
   def project_params
     params.require(:project).permit(:name, :description, :max_shares, :picture_url, :deadline, shares_attributes: [:price, :share_type, :_destroy])
