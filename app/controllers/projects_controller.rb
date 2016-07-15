@@ -34,6 +34,6 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:name, :description, :max_shares, :picture_url, :deadline, shares_attributes: [:price, :share_type])
+    params.require(:project).permit(:name, :description, :max_shares, :picture_url, :deadline, shares_attributes: [:price, :share_type, :_destroy])
   end
 end

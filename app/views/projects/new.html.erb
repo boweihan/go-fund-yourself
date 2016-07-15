@@ -21,18 +21,14 @@
     <%= f.label :deadline %><br>
     <%= f.datetime_select :deadline %>
   </div>
-  <div class="field">
+
     <h2>Shares Available For Sale</h2>
-    <%= f.fields_for :shares do |r| %>
-      <div class="field">
-        <%= r.label :price %>
-        <%= r.number_field :price %>
-      </div>
-      <div class="field">
-        <%= r.label :share_type %>
-        <%= r.text_field :share_type %>
-      </div>
+    <%= f.fields_for :shares, html:{id: 'shares'} do |share| %>
+    <div class="field">
+      <%= render 'share_fields', f: share%>
+      <%= link_to_add_association 'add share type', f, :shares, {class:'links'} %>
     <% end %>
-  </div>
+
+
   <%= f.submit %>
 <% end %>
