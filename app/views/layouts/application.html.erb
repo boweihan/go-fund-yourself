@@ -18,7 +18,7 @@
   <% end %>
   </div>
   <% flash.each do |key, value | %>
-    <div id='flash_message'><%= value %></div>
+    <div id='flash_message'><%= image_tag 'check.png', id: 'checkmark' %><%= value %></div>
   <% end %>
   <%= yield %>
 

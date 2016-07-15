@@ -38,9 +38,10 @@
 }
 
 .profile-page-email {
-  font-size: 24px;
+  font-size: 20px;
   margin: 0;
-    color: #419B8D;
+  color: #419B8D;
+  font-weight: lighter;
 
 }
 
@@ -56,51 +57,59 @@
   height: 308px;
   background-color: #F0F1F3;
   display: inline-block;
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
   margin-top: 24px;
+  margin-right: 40px;
+  overflow: hidden;
 }
+
 
 .profile-page-titles {
   font-size: 20px;
-  margin: 36px 0 0 44px;
+  margin: 24px 0 0 44px;
 }
 
 .project-image {
-  width: 296px;
-  height:166px;
+  width: 294px;
+  height:164px;
 }
 .project-name {
-  font-size: 24px;
-  margin: 16px;
+  font-size: 16px;
+  margin: 8px 16px;
   display: inline-block;
 }
 
 .project-shares-total {
   margin-left: 16px;
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 0;
+  font-weight: lighter;
 }
 
 .project-funded {
-  font-size: 16px;
+  font-size: 14px;
   display: inline-block;
-  margin-left: 30px;
+  float: right;
+  margin: 8px 8px;
+  font-weight: lighter;
   color: #419B8D;
 }
 
 .project-days-togo {
-  font-size: 16px;
+  font-size: 14px;
   display: inline-block;
   margin-left: 16px;
-  margin-top: 10px;
+  margin-top: 24px;
   display: inline-block;
+  font-weight: lighter;
 }
 
 .edit-project {
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 100px;
   display: inline-block;
   color: #419B8D;
+  font-weight: lighter;
 }
 
 // shares styling
@@ -109,8 +118,8 @@
 }
 
 .profile-page-purchase{
-  height: 72px;
-  margin: 24px 44px 0 0;
+  height: 64px;
+  margin: 0px 44px 0 0;
   margin-bottom: 0px;
   padding: 16px;
 }
@@ -120,8 +129,7 @@
 }
 
 .purchase-project {
-  font-size: 24px;
-  margin-left: 8px;
+  font-size: 18px;
   color: #419B8D;
   display: inline-block;
 }
@@ -129,5 +137,5 @@
 .purchase-num-shares {
   font-size: 20px;
   display: inline-block;
-  margin-left: 500px;
+  margin-left: 400px;
 }
