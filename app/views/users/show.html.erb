@@ -11,11 +11,11 @@
   <% @user.projects.each do |project| %>
       <div class="profile-page-project">
       <a href="/projects/<%= project.id %>"><img class="project-image" src="<%= project.picture_url %>" alt=""></a>
-      <h1 class="project-name"><%= project.name %></h1>
+      <h1 class="project-name-class"><%= project.name %></h1>
       <h1 class="project-funded"><%= project.percentage %>% funded</h1>
       <h1 class="project-shares-total"><%= project.calculate_shares('left') %> Shares Left</h1>
       <h1 class="project-days-togo"><%= project.days_left %> Days left</h1>
-      <h1 class="edit-project">(Edit Project)</h1>
+      <h1 class="edit-project"><%= link_to "(Edit Project)", edit_project_path(project), class:"edit-project-link"%></h1>
     </div>
   <% end %>
 
