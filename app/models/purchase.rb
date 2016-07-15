@@ -12,7 +12,7 @@ class Purchase < ActiveRecord::Base
     if self.share_id
       share_want = Share.find(self.share_id)
     else
-      errors.add(:share_id, "not found")
+      errors.add(:share_id, "not found. Select share")
       return
     end
 
