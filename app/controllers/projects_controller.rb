@@ -47,6 +47,11 @@ class ProjectsController < ApplicationController
     redirect_to projects_path
   end
 
+  def statistics
+    # render :layout => false
+    @project = Project.find(params[:id])
+  end
+
   private
   def project_params
     params.require(:project).permit(:name, :description, :max_shares, :picture_url, :deadline, shares_attributes: [:price, :share_type, :_destroy])
