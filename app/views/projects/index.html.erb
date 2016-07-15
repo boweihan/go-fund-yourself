@@ -1,14 +1,15 @@
-<body>
+<div class="page-body">
 
 <h1 class="page-heading">All Projects</h1>
 <% @projects.each do |project| %>
 <div class="project-card">
-  <%= link_to image_tag(project.picture_url), project_path(project), class:'viewProjectImage'%>
+  <%= link_to image_tag(project.picture_url), project_path(project), :id =>'viewProjectImage'%>
   <h1 class="project-name"><%= project.name %></h1>
   <p class="project-description"><%= project.description %></p>
-  <h4 class="project-link"><%= link_to "See Project", project_path(project) %></h4>
+  <%= link_to "See Project", project_path(project), class:"project-link" %>
 </div>
 <% end %>
 
 <%= link_to "New Project", new_project_path %>
-</body>
+
+</div>
