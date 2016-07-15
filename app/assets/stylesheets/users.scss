@@ -57,9 +57,12 @@
   height: 308px;
   background-color: #F0F1F3;
   display: inline-block;
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
   margin-top: 24px;
+  margin-right: 40px;
+  overflow: hidden;
 }
+
 
 .profile-page-titles {
   font-size: 20px;
@@ -67,26 +70,27 @@
 }
 
 .project-image {
-  width: 296px;
-  height:166px;
+  width: 294px;
+  height:164px;
 }
 .project-name {
-  font-size: 24px;
+  font-size: 16px;
   margin: 8px 16px;
   display: inline-block;
 }
 
 .project-shares-total {
   margin-left: 16px;
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 0;
   font-weight: lighter;
 }
 
 .project-funded {
-  font-size: 16px;
+  font-size: 14px;
   display: inline-block;
-  margin-left: 10px;
+  float: right;
+  margin: 8px 8px;
   font-weight: lighter;
   color: #419B8D;
 }
