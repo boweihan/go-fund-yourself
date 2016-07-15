@@ -17,8 +17,8 @@
 <p class="project-description-show"><%= @project.description %></p>
 
 
-<p class="sharesSold">Progress:</p>
-<p id="qwerty"><%= @project.percentage.round(1) %> %</p>
+<p class="sharesSold">Percentage of Shares Sold: <%= @project.percentage.round(1)%>%</p>
+<p id="qwerty"><%= @project.percentage.round(1) %> </p>
 
   <div id="myProgress">
     <div id="myBar"></div>
@@ -43,10 +43,10 @@ function move() {
 }
 move()
 </script>
-
-<div class="pricePerShare"> Price Per Share ($US):
+<br>
+<div class="pricePerShare"> Price Per Share ($US):<br><br>
 <% @project.shares.each do |share| %>
-<%= share.share_type %> @ <%= share.price %> per share
+<%= share.share_type %> @ <%= share.price %>$ per share <br>
 <% end %>
 </div>
 
@@ -57,12 +57,13 @@ move()
 <%= f.label :number_of_shares %>
 <%= f.number_field :number_of_shares %>
 <br>
-
-<%= f.label :share_type %>:
+<%= f.label :share_type %>:<br>
+<div id='project-show-radio'>
 <% @project.shares.each do |share| %>
 
-<%= f.radio_button :share_id, share.id%> <%=share.share_type%>
+<%= f.radio_button :share_id, share.id%> <%=share.share_type%><br>
 <% end %>
+</div>
 <br>
 <%= f.hidden_field :project_id, value: @project.id %>
 <div class="purchaseButton">

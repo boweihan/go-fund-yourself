@@ -20,7 +20,7 @@
   </div>
   <div class="form-field-project-new">
     <%= f.label :deadline %><br>
-    <%= f.datetime_select :deadline, id: 'user-box' %>
+    <%= f.datetime_select :deadline, :discard_hour => true, id: 'user-box' %>
   </div>
 <div id='login-submit-div'><%= submit_tag "Edit Project", class:'login-submit-user' %></div>
 </div>

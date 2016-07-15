@@ -116,6 +116,7 @@ p.project-description-show {
 
 .keyProjectInfo {
   float: right;
+  padding-right: 10%;
   margin: 7%;
 }
 
@@ -140,7 +141,8 @@ p.sharesSold {
 
 #qwerty {
   margin-left: 2%;
-  font-size: 20px
+  font-size: 0px;
+  color: transparent
 }
 
 /* css for progress bar */
@@ -197,7 +199,7 @@ p.sharesSold {
 
 .pricePerShare {
   margin: 2%;
-  margin-bottom:6%;  
+  margin-bottom:6%;
 }
 
 .purchaseForm {
@@ -227,4 +229,22 @@ p.sharesSold {
   margin-right: 40%;
   margin-top: 8%;
 
+}
+
+#project-submit-div {
+  display: block;
+  text-decoration: none;
+  background-color:#00A08E;
+  border:1px solid #00A08E;
+  font-size:17px;
+  font-weight: lighter;
+  color: white;
+  padding:5px 25px;
+  margin-top: 40px;
+  margin-bottom: 20vh;
+  position: relative;
+}
+
+#project-show-radio {
+  margin-left: 20%;
 }
