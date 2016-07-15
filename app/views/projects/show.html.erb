@@ -17,9 +17,8 @@
 <p class="project-description-show"><%= @project.description %></p>
 
 
-<p class="sharesSold">Shares Sold:</p>
-<p id="qwerty"><%= @project.percentage.round(1) %> %</p>
-
+<p class="sharesSold">Percentage of Shares Sold: <%= @project.percentage.round(1)%>%</p>
+<p id="qwerty"><%= @project.percentage.round(1) %> </p>
   <div id="myProgress">
     <div id="myBar"></div>
   </div>

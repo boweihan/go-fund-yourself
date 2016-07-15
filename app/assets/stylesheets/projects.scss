@@ -116,6 +116,7 @@ p.project-description-show {
 
 .keyProjectInfo {
   float: right;
+  padding-right: 10%;
   margin: 7%;
 }
 
@@ -140,7 +141,8 @@ p.sharesSold {
 
 #qwerty {
   margin-left: 2%;
-  font-size: 20px
+  font-size: 0px;
+  color: transparent
 }
 
 /* css for progress bar */
@@ -197,7 +199,7 @@ p.sharesSold {
 
 .pricePerShare {
   margin: 2%;
-  margin-bottom:6%;  
+  margin-bottom:6%;
 }
 
 .purchaseForm {
