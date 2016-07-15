@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   # get 'pages/home'
 
   root 'pages#home'
-  resources :users, except: [:destroy]
-  resources :projects, only: [:index, :show, :new, :create, :destroy]
+
+  resources :users, only: [:index, :show, :new, :create]
+  resources :projects, only: [:index, :show, :new, :create, :destroy, :edit, :update]
+
   resources :purchases, only: [:new, :create]
   # resources :shares, only: []
   resources :sessions, only: [:new, :create, :destroy]
