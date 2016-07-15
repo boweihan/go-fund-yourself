@@ -7,5 +7,9 @@
     <h1 id="welcome-page">Have a great idea?  <span style=color:#00A08E>Share it.</span></h1>
     <p id="sub-header">GoFundYourself is an online platform for crowd funded ideas to grow into companies.  Create your own project, or help someone else's along.</p>
 
+<% if current_user %>
+  <a href="/projects" class="myButton">Get Started</a>
+<% else %>
   <a href="/users/new" class="myButton">Get Started</a>
+<% end %>
 </div>
