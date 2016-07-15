@@ -5,8 +5,8 @@
 # #
 # #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 # #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create(name: 'test', email:'test@test.com', password:'test', password_confirmation:'test')
-User.create(name: 'test2', email:'test2@test2.com', password:'test2', password_confirmation:'test2')
+User.create(name: 'Mary Jane', email:'test@test.com', password:'test', password_confirmation:'test')
+User.create(name: 'John Doe', email:'test2@test2.com', password:'test2', password_confirmation:'test2')
 
 Project.create(name: 'Strawberry FroYo', description: 'Enjoy delicious strawberry frozen yogurt. Organic stawberries and free-range cows.', picture_url: 'http://www.usnews.com/dims4/USNEWS/53a6a05/2147483647/resize/1200x%3E/quality/85/?url=%2Fcmsmedia%2Fe3%2F71%2Fb953c8a64e9ab84473373bddf7cb%2F160104-yogurtfruits-stock.jpg', deadline: DateTime.new(2018, 6, 22), user_id: 1, max_shares: 200)
 Project.create(name: 'Homemade Baskets', description: 'Buy a handmade weaved basket for a friend. Made with organic wheat.', picture_url: 'http://media-cache-ec0.pinimg.com/736x/8c/e9/06/8ce906c48dfd395903b275569dbe0187.jpg', deadline: DateTime.new(2018, 6, 22), user_id: 1, max_shares: 100)

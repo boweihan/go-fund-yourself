@@ -29,7 +29,7 @@
 <div class="profile-page-purchases">
   <% @user.purchases.each do |purchase| %>
     <div class="profile-page-purchase">
-      <h1 class="purchase-project"><%= purchase.project.name %>(link this to project)</h1>
+      <h1 class="purchase-project"><%= purchase.project.name %> <%= link_to "(See Project)", project_path(purchase.project.id), class:"profile-project-link" %></h1>
       <h1 class="purchase-num-shares"><%= purchase.number_of_shares %> shares bought | Market Value $<%= (purchase.share.price) * purchase.number_of_shares %></h1>
     </div>
     <hr class="profile-page-divider">

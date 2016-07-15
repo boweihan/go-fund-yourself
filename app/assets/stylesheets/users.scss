@@ -25,6 +25,7 @@
   display: inline-block;
   float: left;
   margin:  16px 24px 0px 44px;
+  border: 1px solid lightgrey;
 }
 
 .profile-page-user-info {
@@ -66,12 +67,13 @@
 
 .profile-page-titles {
   font-size: 20px;
-  margin: 24px 0 0 44px;
+  margin: 36px 0 0 44px;
 }
 
 .project-image {
   width: 294px;
   height:164px;
+  border: 1px solid lightgrey;
 }
 .project-name {
   font-size: 16px;
@@ -99,7 +101,7 @@
   font-size: 14px;
   display: inline-block;
   margin-left: 16px;
-  margin-top: 24px;
+  margin-top: 36px;
   display: inline-block;
   font-weight: lighter;
 }
@@ -121,7 +123,8 @@
   height: 64px;
   margin: 0px 44px 0 0;
   margin-bottom: 0px;
-  padding: 16px;
+  padding-top: 24px;
+  overflow: hidden;
 }
 
 .profile-page-divider {
@@ -129,13 +132,21 @@
 }
 
 .purchase-project {
-  font-size: 18px;
-  color: #419B8D;
+  font-size: 16px;
   display: inline-block;
 }
 
 .purchase-num-shares {
-  font-size: 20px;
+  font-size: 14px;
   display: inline-block;
+  float: right;
   margin-left: 400px;
+  font-weight: lighter;
+}
+
+.profile-project-link {
+  color: #419B8D;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: lighter;
 }
