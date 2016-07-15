@@ -5,9 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background-color: #f0f0f5;
-
-
+  background-color: hsl(240, 20%, 97%);
   }
 
 #viewProjectImage img{
@@ -22,7 +20,7 @@
 
 .page-heading {
   font-size: 30px;
-  color: black;
+  color: #28283e;
   text-align: center;
   margin-bottom: 2%;
   padding-top: 2%;
@@ -31,7 +29,7 @@
 .project-card {
   width: 46%;
   height: 500px;
-  background-color: #F0F1F3;
+  background-color: hsl(240, 20%, 98%);
   display: inline-block;
   border: 1px solid grey;
   margin: 1.8%;
@@ -41,14 +39,17 @@
 
 h1.project-name {
   font-size: 22px;
+  color: #28283e;
   margin: 4%;
 
 }
 
 .project-description {
   font-size: 14px;
+  color: #28283e;
   line-height: 1.5;
   margin: 4%;
+
 }
 
 .project-link {
@@ -70,6 +71,8 @@ h1.project-name {
 div.individualProductPageBody{
   box-sizing: border-box;
   margin: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
   font-family: 'Open Sans', sans-serif;
   background-color: hsl(240, 20%, 99%);
 
@@ -96,24 +99,24 @@ h1.project-name-show {
 img.individualProductPageImage {
   margin: 2%;
   max-height: 500px;
-  max-width: 600px;
+  max-width: 60%;
   border: 2px solid grey;
 }
 
 h4.project-description-title-show {
   margin: 2%;
-  font-size: 22px;
+  font-size: 25px;
 }
 
 p.project-description-show {
   margin: 2%;
-  font-size: 14px;
+  font-size: 18px;
 
 }
 
 .keyProjectInfo {
   float: right;
-  margin: 10%;
+  margin: 7%;
 }
 
 p.project-max-shares-show {
@@ -129,9 +132,15 @@ p.daysToGo {
 
 }
 
-p.percentageCompletion {
-  font-size: 25px;
-  margin: 2%;
+p.sharesSold {
+  font-size: 20px;
+  margin-left: 2%;
+  margin-top: 6%;
+}
+
+#qwerty {
+  margin-left: 2%;
+  font-size: 20px
 }
 
 /* css for progress bar */
@@ -140,7 +149,7 @@ p.percentageCompletion {
     position: relative;
     width: 96%;
     height: 30px;
-    background-color: grey;
+    background-color: #d1d1e0;
     margin: 2%;
 
 }
@@ -148,10 +157,11 @@ p.percentageCompletion {
     position: absolute;
     width: 1%;
     height: 100%;
-    background-color: green;
-
+    background-color: #00A08E;
 
 }
+
+
 
 #user-box {
   width: 300px;
@@ -182,5 +192,39 @@ p.percentageCompletion {
 #share-new-form {
   width: 100%;
   margin-bottom: 20vh;
+
+}
+
+.pricePerShare {
+  margin: 2%;
+  margin-bottom:6%;  
+}
+
+.purchaseForm {
+  border: 2px solid grey;
+  color: hsl(173, 100%, 31%);
+  background-color: hsl(240, 20%, 97%);
+  width: 60%;
+  margin-left:20%;
+  margin-right: 20%;
+  padding: 9% 0;
+}
+.purchaseFormTitle {
+  margin-left: 35%;
+  margin-right: 30%;
+  margin-bottom: 7%;
+}
+
+.numSharesOnForm {
+  margin-left: 25%;
+  margin-right: 25%;
+  font-size: 18px
+
+}
+
+.purchaseButton {
+  margin-left: 35%;
+  margin-right: 40%;
+  margin-top: 8%;
 
 }

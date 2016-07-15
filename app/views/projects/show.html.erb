@@ -1,3 +1,5 @@
+
+
 <div class="individualProductPageBody">
 
 <%= link_to "Back to all projects", projects_path, class:"backToAllProjectsButton" %>
@@ -14,11 +16,16 @@
 <h4 class="project-description-title-show">Description</h4>
 <p class="project-description-show"><%= @project.description %></p>
 
-<p class="percentageCompletion">Campaign Completion Percentage:</p>
+
+<p class="sharesSold">Shares Sold:</p>
+<p id="qwerty"><%= @project.percentage.round(1) %> %</p>
+
   <div id="myProgress">
     <div id="myBar"></div>
   </div>
-<p id='qwerty'><%= @project.percentage.round(1) %> %</p>
+
+
+
 <script>
 function move() {
     var elem = document.getElementById("myBar");
@@ -38,12 +45,16 @@ function move() {
 move()
 </script>
 
-<h3> Possible Share Types: </h3>
+<div class="pricePerShare"> Price Per Share ($US):
 <% @project.shares.each do |share| %>
 <%= share.share_type %> @ <%= share.price %> per share
 <% end %>
-<h2> Purchase Form </h2>
+</div>
+
+<div class=purchaseForm>
+<h2 class="purchaseFormTitle"> Purchase Shares </h2>
 <%= form_for @purchase do |f| %>
+<div class="numSharesOnForm"
 <%= f.label :number_of_shares %>
 <%= f.number_field :number_of_shares %>
 <br>
@@ -55,6 +66,9 @@ move()
 <% end %>
 <br>
 <%= f.hidden_field :project_id, value: @project.id %>
-<%= f.submit "Make a Donation"%>
+<div class="purchaseButton">
+  <%= f.submit "Purchase Shares"%>
 <% end %>
+</div>
+</div>
 </div>
