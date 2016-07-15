@@ -4,4 +4,5 @@ class Share < ActiveRecord::Base
 
   validates :price, numericality: {greater_than: 0}
   validates :share_type, :price, presence: true
+
 end

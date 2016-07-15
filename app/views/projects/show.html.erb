@@ -8,7 +8,7 @@
 
 <div class="keyProjectInfo">
 <p class="project-max-shares-show"><%= @project.max_shares %></p> maximum shares
-<p class="sharesAvailable"><%= @project.calculate_shares('left') %></p> shares available
+<p class="sharesAvailable"><%= @project.calculate_shares("left") %></p> shares available
 <p class="daysToGo"><%= @project.days_left%></p> days to go
 </div>
 
@@ -19,6 +19,7 @@
 
 <p class="sharesSold">Percentage of Shares Sold: <%= @project.percentage.round(1)%>%</p>
 <p id="qwerty"><%= @project.percentage.round(1) %> </p>
+
   <div id="myProgress">
     <div id="myBar"></div>
   </div>
@@ -69,42 +70,48 @@ move()
   <%= f.submit "Purchase Shares"%>
 <% end %>
 
-</div>
+
 </div>
 </div>
 
+</div>
+<br><br><br><br><br>
 <script type="text/javascript">
  $(function () {
-  var chart = new CanvasJS.Chart("chartContainer",
-  {
-    title:{
-      text: "Top Categories of New Year's Resolution"
-    },
-    exportFileName: "Pie Chart",
-    exportEnabled: true,
-                animationEnabled: true,
-    legend:{
-      verticalAlign: "bottom",
-      horizontalAlign: "center"
-    },
-    data: [
+  url = document.URL.split("/")
+
+  $.ajax({
+    method: 'GET',
+    url: "/shares",
+    data: {project_id: url[url.length-1]}
+  }).done(function(response){
+    var chart = new CanvasJS.Chart("chartContainer",
     {
-      type: "pie",
-      showInLegend: true,
-      toolTipContent: "{legendText}: <strong>{y}%</strong>",
-      indexLabel: "{label} {y}%",
-      dataPoints: [
-        {  y: 35, legendText: "Health", exploded: true, label: "Health" },
-        {  y: 20, legendText: "Finance", label: "Finance" },
-        {  y: 18, legendText: "Career", label: "Career" },
-        {  y: 15, legendText: "Education", label: "Education"},
-        {  y: 5, legendText: "Family", label: "Family" },
-        {  y: 7, legendText: "Real Estate", label: "Real Estate"}
-      ]
-  }
-  ]
-  });
-  chart.render();
+      title:{
+        text: "Breakdown of Share Types Purchased"
+      },
+      exportFileName: "Pie Chart",
+      exportEnabled: true,
+                  animationEnabled: true,
+      legend:{
+        verticalAlign: "bottom",
+        horizontalAlign: "center"
+      },
+      data: [
+      {
+        type: "pie",
+        showInLegend: true,
+        toolTipContent: "{legendText}: <strong>{y}%</strong>",
+        indexLabel: "{label} {y}%",
+        dataPoints: response
+    }
+    ]
+    });
+    chart.render();
+  })
+
+  //ajax
+
 })
 </script>
 

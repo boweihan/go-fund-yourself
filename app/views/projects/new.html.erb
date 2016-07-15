@@ -29,9 +29,14 @@
 
     <%= f.fields_for :shares, html:{id: 'shares'} do |share| %>
       <%= render 'share_fields', f: share%>
+
     <div class="form-field-project-new">
+
       <%= link_to_add_association 'add share type', f, :shares, {class:'links'} %>
+
     <% end %>
 
+
   <%= submit_tag "Create Project" , id:'project-submit-div'%>
+
 <% end %>
