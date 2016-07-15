@@ -14,11 +14,11 @@
   <% if current_user %>
     <%= link_to "View Projects", projects_url, class:"viewProject" %><%= link_to 'View Profile', user_path(current_user), class:"viewProject" %> <%= link_to "Logout", session_path("this session"), class:"signUpButton", :method => :delete %>
   <% else %>
-    <%= link_to "View Projects", projects_url, class:"viewProject" %><%= link_to "Login", new_session_path, class:"loginButton" %> <%= link_to "Sign-Up", new_user_path, class:"signUpButton" %>
+    <%= link_to "View Projects", projects_url, class:"viewProject" %><%= link_to "Log In", new_session_path, class:"loginButton" %> <%= link_to "Sign Up", new_user_path, class:"signUpButton" %>
   <% end %>
   </div>
   <% flash.each do |key, value | %>
-    <div id='flash_message'><%= image_tag 'check.png', id: 'checkmark' %><%= value %></div>
+    <div id='flash_message'><%= image_tag 'whitecheck.png', id: 'checkmark' %><%= value %></div>
   <% end %>
   <%= yield %>
 
