@@ -1,26 +1,30 @@
-<body class="individualProductPageBody">
 
 
-<h1 class="project-name-show"><%= @project.name %></h1><%= link_to "Back to all projects", projects_path, class:"backToAllProjectsButton" %>
+<div class="individualProductPageBody">
+
+<%= link_to "Back to all projects", projects_path, class:"backToAllProjectsButton" %>
+<h1 class="project-name-show"><%= @project.name %></h1>
+<%= image_tag @project.picture_url, class:"individualProductPageImage" %>
+
+<div class="keyProjectInfo">
+<p class="project-max-shares-show"><%= @project.max_shares %></p> maximum shares
+<p class="sharesAvailable"><%= @project.calculate_shares('left') %></p> shares available
+<p class="daysToGo"><%= @project.days_left%></p> days to go
+</div>
+
+
 <h4 class="project-description-title-show">Description</h4>
-<p class="project-description-show">
-  <%= @project.description %>
-</p>
-<h4 class="project-max-shares-show">Maximum Shares: <%= @project.max_shares %></h4>
+<p class="project-description-show"><%= @project.description %></p>
 
-<p>
-  Shares Available:
-  <%= @project.calculate_shares('left') %></p>
 
-<%= @project.days_left %> days left <br>
-<%= image_tag @project.picture_url %>
-<p>Campaign Completion Percentage:</p>
-<p id='qwerty'>
-  <%= @project.percentage.round(1) %> %
-</p>
+<p class="sharesSold">Shares Sold:</p>
+<p id="qwerty"><%= @project.percentage.round(1) %> %</p>
+
   <div id="myProgress">
     <div id="myBar"></div>
   </div>
+
+
 
 <script>
 function move() {
@@ -41,12 +45,16 @@ function move() {
 move()
 </script>
 
-<h3> Possible Share Types: </h3>
+<div class="pricePerShare"> Price Per Share ($US):
 <% @project.shares.each do |share| %>
 <%= share.share_type %> @ <%= share.price %> per share
 <% end %>
-<h2> Purchase Form </h2>
+</div>
+
+<div class=purchaseForm>
+<h2 class="purchaseFormTitle"> Purchase Shares </h2>
 <%= form_for @purchase do |f| %>
+<div class="numSharesOnForm"
 <%= f.label :number_of_shares %>
 <%= f.number_field :number_of_shares %>
 <br>
@@ -58,6 +66,9 @@ move()
 <% end %>
 <br>
 <%= f.hidden_field :project_id, value: @project.id %>
-<%= f.submit "Make a Donation"%>
+<div class="purchaseButton">
+  <%= f.submit "Purchase Shares"%>
 <% end %>
-</body>
+</div>
+</div>
+</div>

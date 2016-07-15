@@ -21,7 +21,7 @@
   </div>
   <div class="form-field-project-new">
     <%= f.label :deadline %><br>
-    <%= f.datetime_select :deadline, id: 'user-box' %>
+    <%= f.datetime_select :deadline, :discard_hour => true, id: 'user-box' %>
   </div>
 </div>
 
