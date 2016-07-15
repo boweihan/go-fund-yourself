@@ -75,7 +75,7 @@
   height:164px;
   border: 1px solid lightgrey;
 }
-.project-name {
+.project-name-class {
   font-size: 16px;
   margin: 8px 16px;
   display: inline-block;
@@ -101,18 +101,25 @@
   font-size: 14px;
   display: inline-block;
   margin-left: 16px;
-  margin-top: 36px;
+  margin-top: 48px;
   display: inline-block;
   font-weight: lighter;
 }
 
 .edit-project {
   font-size: 14px;
-  margin-left: 100px;
+  float: right;
   display: inline-block;
+  margin-top: 48px;
+}
+
+.edit-project-link {
   color: #419B8D;
   font-weight: lighter;
+  text-decoration: none;
+  margin-right: 8px;  
 }
+
 
 // shares styling
 .profile-page-purchases {
