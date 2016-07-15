@@ -24,9 +24,10 @@
 
     <h2>Shares Available For Sale</h2>
     <%= f.fields_for :shares, html:{id: 'shares'} do |share| %>
-    <div class="field">
       <%= render 'share_fields', f: share%>
+
       <%= link_to_add_association 'add share type', f, :shares, {class:'links'} %>
+
     <% end %>
 
 
