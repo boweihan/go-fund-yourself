@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show, :new, :create]
   get 'projects/:id/statistics' => 'projects#statistics'
   resources :projects, only: [:index, :show, :new, :create, :destroy, :edit, :update]
-
+  get 'shares/' => 'shares#api'
 
   resources :purchases, only: [:new, :create]
   # resources :shares, only: []

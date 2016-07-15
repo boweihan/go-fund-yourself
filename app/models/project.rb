@@ -12,6 +12,7 @@ class Project < ActiveRecord::Base
 
   def calculate_shares(status)
     shares_sold= Purchase.where(project_id: self.id).sum(:number_of_shares)
+
     if status == 'sold'
       return shares_sold
     elsif status == 'left'
