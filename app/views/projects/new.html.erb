@@ -27,13 +27,11 @@
 
 <h1 class="page-heading">Shares Available For Sale</h1>
 
-<div id='share-new-form'>
     <%= f.fields_for :shares, html:{id: 'shares'} do |share| %>
-    <div class="form-field-project-new">
       <%= render 'share_fields', f: share%>
+    <div class="form-field-project-new">
       <%= link_to_add_association 'add share type', f, :shares, {class:'links'} %>
     <% end %>
-</div>
 
   <div id='login-submit-div'><%= submit_tag "Sign Up" , class:'login-submit-user'%></div>
 <% end %>

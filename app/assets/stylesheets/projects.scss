@@ -64,6 +64,7 @@ h1.project-name {
 }
 
 
+
 // BELOW: Individual Product Page Styling
 
 body.individualProductPageBody{
@@ -71,6 +72,36 @@ body.individualProductPageBody{
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   background-color: #f0f0f5;
+}
+
+/* css for progress bar */
+
+#myProgress {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: grey;
+}
+#myBar {
+    position: absolute;
+    width: 1%;
+    height: 100%;
+    background-color: green;
+}
+
+/* CSS for project new page */
+
+#project-new-form {
+  width: 100%;
+  height: 350px;
+  margin: auto;
+
+}
+
+#share-new-form {
+  width: 100%;
+  margin-bottom: 20vh;
+
 }
 
 .backToAllProjectsButton {
@@ -87,6 +118,7 @@ body.individualProductPageBody{
 h1.project-name-show {
   margin: 2%;
   font-size: 30px;
+
 }
 
 h4.project-description-title-show {
@@ -97,4 +129,21 @@ h4.project-description-title-show {
 p.project-description-show {
   margin: 2%;
   font-size: 14px;
+
+}
+
+#user-box {
+  width: 300px;
+  height: 35px;
+  border: 2px solid #d9d9d9;
+  border-radius: 5%;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.form-field-project-new {
+  margin-left: 150px;
+}
+#nested-fields-margin {
+  margin-left: 150px;
 }
