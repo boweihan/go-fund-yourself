@@ -151,7 +151,7 @@
 }
 #loginBox {
   width: 400px;
-  height: 450px;
+  height: 500px;
   border: 1px solid black;
   margin: auto;
   margin-top: 50px;
@@ -176,12 +176,12 @@
   margin-left: 50px;
 }
 
-#email-box {
+#user-box {
   width: 300px;
   height: 35px;
   border: 2px solid #d9d9d9;
   border-radius: 5%;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   margin-top: 5px;
 }
 
@@ -193,7 +193,7 @@
   margin-top: 5px;
 }
 
-.login-submit {
+.login-submit-user {
   margin: 0 auto;
   display: block;
   text-decoration: none;
@@ -204,6 +204,7 @@
   color: white;
   padding:5px 25px;
   margin-top: 40px;
+  position: relative;
 }
 
 #login-x {
@@ -223,13 +224,14 @@
     background-color: gray;
   }
 
-#background-tab-right {
+#background-tab-right-user {
+  text-decoration: none;
   width: 200px;
   height: 50px;
   border: 1px solid black;
   position: fixed;
   margin: auto;
-  margin-left: 199px;
+  margin-left: 0px;
   background-color: black;
   opacity: 0.3;
   color: white;
@@ -237,11 +239,13 @@
   text-align: center;
 }
 
-#background-tab-left {
+#background-tab-left-user {
+  text-decoration: none;
   width: 200px;
   height: 50px;
   position: fixed;
   margin: auto;
+  margin-left: 199px;
   color: #00A08E;
   line-height: 50px;
   text-align: center;

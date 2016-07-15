@@ -3,18 +3,18 @@
 </div>
 <div id='loginBackground'></div>
   <div id='loginBox'>
-    <div id='background-tab-right'>Sign Up</div>
-    <div id='background-tab-left'>Log In</div>
+    <a href='/users/new' id='background-tab-right'>Sign Up</a>
+    <a href='/sessions/new' id='background-tab-left'>Log In</a>
     <%= form_tag sessions_path do %>
       <div class="form-field-top">
         <%= label_tag :email %><br>
-        <%= email_field_tag :email, params[:email], placeholder: "ex. name@domain.com", id:'email-box' %>
+        <%= email_field_tag :email, params[:email], id:'email-box' %>
       </div>
       <div class="form-field">
         <%= label_tag :password %><br>
         <%= password_field_tag :password %>
       </div>
-      <div id='login-submit-div'><%= submit_tag "Log In" , class:'login-submit'%></div>
+      <%= submit_tag "Log In" , class:'login-submit'%>
     <% end %>
   </div>
 
