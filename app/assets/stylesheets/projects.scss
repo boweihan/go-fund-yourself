@@ -61,9 +61,39 @@ h1.project-name {
   color: white;
   padding:1px 25px;
   margin: 4%;
+}
 
+// .newProjectButton {
+//   text-decoration: none;
+//   background-color:#00A08E;
+//   border:1px solid #00A08E;
+//   font-size:17px;
+//   font-weight: lighter;
+//   color: white;
+//   padding:1px 25px;
+// }
 
+// BELOW: Individual Product Page Styling
 
+body.individualProductPageBody{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f0f0f5;
+}
 
+.backToAllProjectsButton {
+  text-decoration: none;
+  background-color:#00A08E;
+  border:1px solid #00A08E;
+  font-size:17px;
+  font-weight: lighter;
+  color: white;
+  padding:1px 25px;
+  margin: 2%;
+}
 
+h1.project-name-show {
+  margin: 2%;
+  font-size: 30px;
 }

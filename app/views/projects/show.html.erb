@@ -1,6 +1,7 @@
-<%= link_to "Back to all projects", projects_path %>
+<body class="individualProductPageBody">
 
-<h1 class="project-name-show"><%= @project.name %></h1>
+
+<h1 class="project-name-show"><%= @project.name %></h1><%= link_to "Back to all projects", projects_path, class:"backToAllProjectsButton" %>
 <h4 class="project-description-title-show">Description</h4>
 <p class="project-description-show">
   <%= @project.description %>
@@ -37,3 +38,4 @@
 <%= f.hidden_field :project_id, value: @project.id %>
 <%= f.submit "Make a Donation"%>
 <% end %>
+</body>
